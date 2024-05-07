@@ -1,0 +1,16 @@
+.container{
+    background-color: #D9D9D9;
+    width: 25rem;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    
+}
+
