@@ -1,7 +1,12 @@
 import { Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react"
-import React from "react"
+import React, { ChangeEventHandler } from "react"
 
-export default function SenhaInput() {
+interface Props{
+  onChange: ChangeEventHandler<HTMLInputElement>;
+}
+
+
+export default function SenhaInput({onChange}:Props) {
     const [show, setShow] = React.useState(false)
     const handleClick = () => setShow(!show)
   
@@ -11,6 +16,7 @@ export default function SenhaInput() {
           pr='4.5rem'
           type={show ? 'text' : 'password'}
           background={"#FFFFFF"} placeholder='Digite sua senha'
+          onChange={onChange}
         />
         <InputRightElement width='4.5rem'>
           <Button h='1.75rem' size='sm' onClick={handleClick}>
